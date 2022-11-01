@@ -1,0 +1,23 @@
+{% extends 'products/base.html' %}
+
+{% block content %}
+    <h1 class="my-4">Detalhes  -
+        <small>{{ object.name }}</small>
+    </h1>
+    <div class="row">
+        <div class="col-12">
+            <ul class="list-group">
+              <li class="list-group-item"><strong>Tipo do quarto:</strong> {{ object.name }}</li>
+              <li class="list-group-item"><strong>Diária:</strong> {{ object.description }}</li>
+              <li class="list-group-item"><strong>Preço do quarto:</strong> {{ object.price }}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row top-buffer">
+        <div class="col-12">
+                <a href="{% url 'product_edit' object.id %}"><button type="button" class="btn btn-success">Editar</button></a>
+                <a href="{% url 'product_list' %}"><button type="button" class="btn btn-secondary">Voltar</button></a>
+        </div>
+    </div>
+{% endblock %}
