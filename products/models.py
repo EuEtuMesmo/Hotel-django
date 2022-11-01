@@ -3,7 +3,7 @@ from django.db import models
 
 
 class Product(models.Model):
-    name = models.CharField('Nome', max_length=100)
+    name = models.CharField('Tipo de quarto', max_length=100)
     description = models.TextField('Diária', blank=True)
     price = models.DecimalField('Preço do quarto', decimal_places=2, max_digits=8)
     created = models.DateTimeField('Criado', auto_now_add=True)
